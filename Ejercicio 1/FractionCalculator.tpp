@@ -61,25 +61,25 @@ FractionCalculator<T>::~FractionCalculator()
 template<Integer T>
 void FractionCalculator<T>::Sum()
 {
-	PrintResult(firstFraction + secondFraction);
+	PrintResult((firstFraction + secondFraction).Simplify());
 }
 
 template<Integer T>
 void FractionCalculator<T>::Substract()
 {
-	PrintResult(firstFraction - secondFraction);
+	PrintResult((firstFraction - secondFraction).Simplify());
 }
 
 template<Integer T>
 void FractionCalculator<T>::Multiply()
 {
-	PrintResult(firstFraction * secondFraction);
+	PrintResult((firstFraction * secondFraction).Simplify());
 }
 
 template<Integer T>
 void FractionCalculator<T>::Divide()
 {
-	PrintResult(firstFraction / secondFraction);
+	PrintResult((firstFraction / secondFraction).Simplify());
 }
 
 template<Integer T>

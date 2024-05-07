@@ -32,6 +32,28 @@ string Fraction<T>::ToString()
 }
 
 template<Integer T>
+Fraction<T> Fraction<T>::Simplify()
+{
+	T smallerNum;
+	this->denominator < this->numerator ? smallerNum = this->denominator : smallerNum = this->denominator;
+
+	T auxNumerator = this->numerator;
+	T auxDenominator = this->denominator;
+
+	for (int i = smallerNum; i > 1; i--)
+	{
+		if (auxNumerator % i == 0 && auxDenominator % i == 0)
+		{
+			auxNumerator /= i;
+			auxDenominator /= i;
+			i = smallerNum;
+		}
+	}
+
+	return Fraction<T>(auxNumerator, auxDenominator);
+}
+
+template<Integer T>
 Fraction<T> Fraction<T>::operator+(Fraction<T> otherFraction)
 {
 	if (this->denominator == otherFraction.denominator)

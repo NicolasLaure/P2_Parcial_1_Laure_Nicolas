@@ -20,6 +20,7 @@ public:
 	Fraction(T numerator, T denominator);
 	~Fraction();
 	string ToString();
+	Fraction <T> Simplify();
 
 
 	Fraction<T> operator + (Fraction<T> otherFraction);
