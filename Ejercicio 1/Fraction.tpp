@@ -34,8 +34,7 @@ string Fraction<T>::ToString()
 template<Integer T>
 Fraction<T> Fraction<T>::Simplify()
 {
-	T smallerNum;
-	this->denominator < this->numerator ? smallerNum = this->denominator : smallerNum = this->denominator;
+	T smallerNum = this->denominator < this->numerator ? this->denominator : this->numerator;
 
 	T auxNumerator = this->numerator;
 	T auxDenominator = this->denominator;
