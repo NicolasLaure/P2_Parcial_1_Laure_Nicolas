@@ -141,7 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Fraction.tpp" />
-    <ClCompile Include="FractionCalculator.cpp" />
+    <ClCompile Include="FractionCalculator.tpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>

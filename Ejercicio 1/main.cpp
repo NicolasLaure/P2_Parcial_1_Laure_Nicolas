@@ -2,7 +2,5 @@
 
 void main()
 {
-	FractionCalculator calculator = FractionCalculator();
-
-	calculator.PrintFraction();
+	FractionCalculator<int> calculator = FractionCalculator<int>();
 }

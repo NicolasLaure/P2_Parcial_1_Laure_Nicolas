@@ -28,7 +28,41 @@ Fraction<T>::~Fraction()
 template<Integer T>
 string Fraction<T>::ToString()
 {
-	return to_string(numerator) + "/" + to_string(denominator);
+	return to_string(this->numerator) + "/" + to_string(this->denominator);
+}
+
+template<Integer T>
+Fraction<T> Fraction<T>::operator+(Fraction<T> otherFraction)
+{
+	if (this->denominator == otherFraction.denominator)
+		return Fraction<T>(this->numerator + otherFraction.numerator, this->denominator);
+
+	T resNumerator = (this->numerator * otherFraction.denominator) + (otherFraction.numerator * this->denominator);
+	T resDenominator = this->denominator * otherFraction.denominator;
+	return Fraction<T>(resNumerator, resDenominator);
+}
+
+template<Integer T>
+Fraction<T> Fraction<T>::operator-(Fraction<T> otherFraction)
+{
+	if (this->denominator == otherFraction.denominator)
+		return Fraction<T>(this->numerator - otherFraction.numerator, this->denominator);
+
+	T resNumerator = (this->numerator * otherFraction.denominator) - (otherFraction.numerator * this->denominator);
+	T resDenominator = this->denominator * otherFraction.denominator;
+	return Fraction<T>(resNumerator, resDenominator);
+}
+
+template<Integer T>
+Fraction<T> Fraction<T>::operator*(Fraction<T> otherFraction)
+{
+	return Fraction<T>(this->numerator * otherFraction.numerator, this->denominator * otherFraction.denominator);
+}
+
+template<Integer T>
+Fraction<T> Fraction<T>::operator/(Fraction<T> otherFraction)
+{
+	return Fraction<T>(this->numerator * otherFraction.denominator, this->denominator * otherFraction.numerator);
 }
 
 #endif // !Fraction_tpp

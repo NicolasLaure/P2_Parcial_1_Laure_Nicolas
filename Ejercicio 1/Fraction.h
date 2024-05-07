@@ -20,7 +20,11 @@ public:
 	Fraction(T numerator, T denominator);
 	~Fraction();
 	string ToString();
+
+
+	Fraction<T> operator + (Fraction<T> otherFraction);
+	Fraction<T> operator - (Fraction<T> otherFraction);
+	Fraction<T> operator * (Fraction<T> otherFraction);
+	Fraction<T> operator / (Fraction<T> otherFraction);
 };
-
-
 #include "Fraction.tpp"
