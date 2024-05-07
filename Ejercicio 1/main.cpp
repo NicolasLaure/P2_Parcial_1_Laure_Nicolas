@@ -2,5 +2,5 @@
 
 void main()
 {
-	FractionCalculator<int> calculator = FractionCalculator<int>();
+	FractionCalculator<short> calculator = FractionCalculator<short>();
 }

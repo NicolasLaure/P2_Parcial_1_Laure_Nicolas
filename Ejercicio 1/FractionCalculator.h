@@ -6,8 +6,8 @@ template<Integer T>
 class FractionCalculator
 {
 private:
-	Fraction<T> firstFraction = Fraction(1, 1);
-	Fraction<T> secondFraction = Fraction(1, 1);
+	Fraction<T> firstFraction = Fraction((T)1, (T)1);
+	Fraction<T> secondFraction = Fraction((T)1, (T)1);
 
 	void Sum();
 	void Substract();
